@@ -1,0 +1,16 @@
+main {
+  padding: 3rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+p, a, label {
+  font-size: 1.6rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}

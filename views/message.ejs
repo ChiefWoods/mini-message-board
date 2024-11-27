@@ -1,0 +1,16 @@
+<html>
+
+  <%- include('head', { title }) %>
+
+  <body>
+    <main>
+      <h1>Message</h1>
+      <p>Message: <%= message.text %></p>
+      <p>User: <%= message.user %></p>
+      <p>Added: <%= message.added.toDateString() %></p>
+      <%- include('nav')%>
+    </main>
+    <%- include('footer') %>
+  </body>
+
+</html>

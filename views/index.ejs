@@ -1,0 +1,22 @@
+<html>
+
+  <%- include('head', { title }) %>
+
+  <body>
+    <main>
+      <h1>Mini Messageboard</h1>
+      <ul>
+        <% messages.forEach((message, i) => { %>
+        <li>
+          <p><%= message.text %></p>
+          <p>- <%= message.user %></p>
+          <button onclick="window.location = ('/message/<%= i %>')">Open</button>
+        </li>
+        <% }) %>
+      </ul>
+      <%- include('nav')%>
+    </main>
+    <%- include('footer') %>
+  </body>
+
+</html>
