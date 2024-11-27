@@ -1,6 +1,9 @@
 {
   "name": "mini-message-board",
   "module": "app.js",
+  "scripts": {
+    "start": "bun --watch app.js"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "ejs": "^3.1.10",
