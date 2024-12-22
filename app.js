@@ -1,4 +1,5 @@
 import express, { Router } from 'express';
+import { addMessage, getAllMessages, getMessage } from './db/queries';
 
 const app = express();
 const port = 8080;
@@ -14,35 +15,24 @@ const links = [
   { href: "/new", text: "Post Message" },
 ];
 
-const messages = [
-  {
-    text: "Hi there!",
-    user: "Amando",
-    added: new Date()
-  },
-  {
-    text: "Hello World!",
-    user: "Charles",
-    added: new Date()
-  }
-];
-
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
+  const messages = await getAllMessages();
   res.render("index", { links, title: "Mini Messageboard", messages });
 });
 
-app.get("/message/:id", (req, res) => {
+app.get("/message/:id", async (req, res) => {
   const { id } = req.params;
-  res.render("message", { links, title: "View Message", message: messages[id] });
+  const message = await getMessage(id);
+  res.render("message", { links, title: "View Message", message });
 });
 
 router.get("/", (req, res) => {
   res.render("form", { links, title: "New Message" });
 });
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   const { messageUser, messageText } = req.body;
-  messages.push({ text: messageText, user: messageUser, added: new Date() });
+  await addMessage(messageUser, messageText);
   res.redirect("/")
 });
 

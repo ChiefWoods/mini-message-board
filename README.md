@@ -16,6 +16,7 @@ Message board for [The Odin Project](https://www.theodinproject.com/).
 - [![CSS3](https://img.shields.io/badge/CSS3-white?style=for-the-badge&logo=css3&logoColor=306AF1)](https://www.w3.org/Style/CSS/Overview.en.html)
 - [![JavaScript](https://img.shields.io/badge/Javascript-383936?style=for-the-badge&logo=javascript)](https://js.org/index.html)
 - [![EJS](https://img.shields.io/badge/EJS-a91e50?style=for-the-badge&logo=ejs)](https://ejs.co/)
+- [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-212121?style=for-the-badge&logo=postgresql)](https://www.postgresql.org/)
 
 ### Packages
 
@@ -25,14 +26,19 @@ Message board for [The Odin Project](https://www.theodinproject.com/).
 
 - [![Bun](https://img.shields.io/badge/Bun-000?style=for-the-badge&logo=bun)](https://bun.sh/)
 
+### Database
+
+- [![Supabase](https://img.shields.io/badge/Supabase-1c1c1c?style=for-the-badge&logo=supabase)](https://supabase.com/)
+
 ## Getting Started
 
 ### Prerequisites
 
-Update your Bun toolkit to the latest version.
+Update your Bun toolkit and PostgreSQL to the latest version.
 
 ```bash
 bun upgrade
+sudo apt install -y postgresql-client
 ```
 
 ### Setup
@@ -43,13 +49,25 @@ bun upgrade
 git clone https://github.com/ChiefWoods/mini-message-board.git
 ```
 
-2. Install all dependencies
+2. Start PostgreSQL
+
+```bash
+sudo systemctl start postgresql.service 
+```
+
+3. In another terminal, install all dependencies
 
 ```bash
 bun install
 ```
 
-3. Start server
+4. Set .env variables
+
+```bash
+DB_CONNECTION_URI=
+```
+
+4. Start server
 
 ```bash
 bun run start
