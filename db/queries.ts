@@ -10,6 +10,6 @@ export async function getMessage(id: number) {
   return rows[0];
 }
 
-export async function addMessage(text: string, user: string) {
+export async function addMessage(user: string, text: string) {
   await pool.query('INSERT INTO messages (text, "user", added) VALUES ($1, $2, DEFAULT)', [text, user]);
 }
