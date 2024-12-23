@@ -16,7 +16,6 @@ Message board for [The Odin Project](https://www.theodinproject.com/).
 - [![CSS3](https://img.shields.io/badge/CSS3-white?style=for-the-badge&logo=css3&logoColor=306AF1)](https://www.w3.org/Style/CSS/Overview.en.html)
 - [![JavaScript](https://img.shields.io/badge/Javascript-383936?style=for-the-badge&logo=javascript)](https://js.org/index.html)
 - [![EJS](https://img.shields.io/badge/EJS-a91e50?style=for-the-badge&logo=ejs)](https://ejs.co/)
-- [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-212121?style=for-the-badge&logo=postgresql)](https://www.postgresql.org/)
 
 ### Packages
 
@@ -28,7 +27,7 @@ Message board for [The Odin Project](https://www.theodinproject.com/).
 
 ### Database
 
-- [![Supabase](https://img.shields.io/badge/Supabase-1c1c1c?style=for-the-badge&logo=supabase)](https://supabase.com/)
+- [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-212121?style=for-the-badge&logo=postgresql)](https://www.postgresql.org/)
 
 ## Getting Started
 
@@ -52,7 +51,7 @@ git clone https://github.com/ChiefWoods/mini-message-board.git
 2. Start PostgreSQL
 
 ```bash
-sudo systemctl start postgresql.service 
+sudo systemctl start postgresql
 ```
 
 3. In another terminal, install all dependencies
@@ -87,6 +86,7 @@ View the [open issues](https://github.com/ChiefWoods/mini-message-board/issues) 
 ### Hosting
 
 - [Render](https://render.com/)
+- [Supabase](https://supabase.com/)
 
 ## Contact
 
